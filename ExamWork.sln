@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamWork", "ExamWork\ExamWork.csproj", "{035446ED-3225-42C6-A1D2-04027AC63EAD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamWork.Web", "ExamWork\ExamWork.Web.csproj", "{035446ED-3225-42C6-A1D2-04027AC63EAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamWork.DB", "ExamWork.DB\ExamWork.DB.csproj", "{24FD5E65-4D9D-4854-AA28-A458382B7FE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{035446ED-3225-42C6-A1D2-04027AC63EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{035446ED-3225-42C6-A1D2-04027AC63EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{035446ED-3225-42C6-A1D2-04027AC63EAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24FD5E65-4D9D-4854-AA28-A458382B7FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24FD5E65-4D9D-4854-AA28-A458382B7FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24FD5E65-4D9D-4854-AA28-A458382B7FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24FD5E65-4D9D-4854-AA28-A458382B7FE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
