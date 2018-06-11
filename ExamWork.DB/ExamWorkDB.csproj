@@ -52,6 +52,11 @@
     <Compile Include="Entities\Genre.cs" />
     <Compile Include="Entities\Movie.cs" />
     <Compile Include="Entities\Director.cs" />
+    <Compile Include="Migrations\201806110745073_InitialCreate.cs" />
+    <Compile Include="Migrations\201806110745073_InitialCreate.Designer.cs">
+      <DependentUpon>201806110745073_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +64,11 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201806110745073_InitialCreate.resx">
+      <DependentUpon>201806110745073_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
