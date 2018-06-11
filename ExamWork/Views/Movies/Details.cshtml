@@ -1,0 +1,50 @@
+﻿@model ExamWork.DB.Entities.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Director.DirectorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Director.DirectorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre.GenreType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre.GenreType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoviePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoviePrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MovieID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

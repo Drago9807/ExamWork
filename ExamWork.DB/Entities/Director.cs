@@ -7,21 +7,21 @@ using System.Threading.Tasks;
 
 namespace ExamWork.DB.Entities
 {
-    public partial class Producer
+    public partial class Director
     {
-        public Producer()
+        public Director()
         {
             this.Movies = new HashSet<Movie>();
         }
 
-        [Required(ErrorMessage = "Producer ID is required")]
+        [Required(ErrorMessage = "Director ID is required")]
         [Key]
-        public int ProducerID { get; set; }
+        public int DirectorID { get; set; }
 
-        [Required(ErrorMessage = "Name of the producer is required")]
-        [Display(Name = "Producer name")]
+        [Required(ErrorMessage = "Name of the director is required")]
+        [Display(Name = "Director name")]
         [StringLength(50)]
-        public string ProducerName { get; set; }
+        public string DirectorName { get; set; }
 
         public virtual ICollection<Movie> Movies { get; set; }
     }

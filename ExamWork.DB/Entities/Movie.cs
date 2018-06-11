@@ -20,14 +20,14 @@ namespace ExamWork.DB.Entities
 
         [Required(ErrorMessage = "Price of the movie is required")]
         [Display(Name = "Movie price")]
-        public int MoviePrice { get; set; }
+        public double MoviePrice { get; set; }
 
         [Required]
         public int GenreID { get; set; }
         public virtual Genre Genre { get; set; }
 
         [Required]
-        public int ProducerID { get; set; }
-        public virtual Producer Producer { get; set; }
+        public int DirectorID { get; set; }
+        public virtual Director Director { get; set; }
     }
 }
