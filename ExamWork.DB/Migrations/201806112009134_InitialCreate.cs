@@ -22,7 +22,7 @@ namespace ExamWork.DB.Migrations
                 {
                     MovieID = c.Int(nullable: true, identity: true),
                     MovieName = c.String(nullable: false, maxLength: 50),
-                    MoviePrice = c.Double(nullable: false),
+                    MoviePrice = c.Double(nullable: true),
                     GenreID = c.Int(nullable: true),
                     DirectorID = c.Int(nullable: true),
                 })

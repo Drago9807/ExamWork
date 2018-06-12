@@ -1,24 +1,27 @@
-﻿using System;
+﻿using ExamWork.DB.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace ExamWork.DB.Entities
+namespace ExamWork.Models
 {
-    public class Genre
+    public class GenreViewModel
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Required(ErrorMessage = "Genre ID is required")]
         [Key]
+        [Required(ErrorMessage = "Genre ID is required")]
         public int GenreID { get; set; }
 
         [Required(ErrorMessage = "Genre type is required")]
         [Display(Name = "Genre type")]
         public string GenreType { get; set; }
 
-        public virtual ICollection<Movie> Movies { get; set; }
+        public GenreViewModel()
+        {
+        }
+        public virtual ICollection<MovieViewModel> Movies { get; set; }
     }
 }

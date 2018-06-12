@@ -19,9 +19,15 @@ namespace ExamWork.DB
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Director> Directors { get; set; }
 
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        //}
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            Database.SetInitializer<MovieContext>(null);
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
