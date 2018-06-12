@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ExamWork.DB.Entities
 {
-    public partial class Genre
+    public class Genre
     {
-        public Genre()
-        {
-            this.Movies = new HashSet<Movie>();
-        }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //public Genre()
+        //{
+        //    this.Movies = new HashSet<Movie>();
+        //}
 
         [Required(ErrorMessage = "Genre ID is required")]
         [Key]

@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ExamWork.DB.Entities
 {
-    public partial class Movie
+    public class Movie
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         [Required(ErrorMessage = "Movie ID is required")]
         public int MovieID { get; set; }
@@ -22,10 +24,12 @@ namespace ExamWork.DB.Entities
         [Display(Name = "Movie price")]
         public double MoviePrice { get; set; }
 
+        [ForeignKey("Genre")]
         [Required]
         public int GenreID { get; set; }
         public virtual Genre Genre { get; set; }
 
+        [ForeignKey("Director")]
         [Required]
         public int DirectorID { get; set; }
         public virtual Director Director { get; set; }

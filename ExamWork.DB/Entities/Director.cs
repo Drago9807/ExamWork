@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ExamWork.DB.Entities
 {
-    public partial class Director
+    public class Director
     {
-        public Director()
-        {
-            this.Movies = new HashSet<Movie>();
-        }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //public Director()
+        //{
+        //    this.Movies = new HashSet<Movie>();
+        //}
 
         [Required(ErrorMessage = "Director ID is required")]
         [Key]

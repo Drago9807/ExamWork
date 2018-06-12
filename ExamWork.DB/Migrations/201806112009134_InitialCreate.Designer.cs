@@ -13,7 +13,7 @@ namespace ExamWork.DB.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201806110745073_InitialCreate"; }
+            get { return "201806112009134_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source
