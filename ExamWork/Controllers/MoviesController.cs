@@ -131,7 +131,7 @@ namespace ExamWork.Controllers
             {
                 return HttpNotFound();
             }
-            //Movie movie = baseRepository.GetMovieByID(id);
+            //Movie movie = baseRepository.GetMovieByID(id);//
             return View(movie);
         }
 

@@ -12,9 +12,9 @@ namespace ExamWork.DB.DataAccessLayer
         protected override void Seed(MovieContext context)
         {
 
-            GetMovies().ForEach(s => context.Movies.Add(s));
-            GetGenres().ForEach(s => context.Genres.Add(s));
-            GetDirectors().ForEach(s => context.Directors.Add(s));
+            GetMovies().ForEach(c => context.Movies.Add(c));
+            GetGenres().ForEach(c => context.Genres.Add(c));
+            GetDirectors().ForEach(c => context.Directors.Add(c));
 
         }
 

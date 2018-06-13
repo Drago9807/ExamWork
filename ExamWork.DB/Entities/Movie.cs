@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ExamWork.DB.Entities
 {
-    public class Movie
+    public class Movie : MovieContext
+
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
@@ -33,5 +36,13 @@ namespace ExamWork.DB.Entities
         [Required]
         public int DirectorID { get; set; }
         public virtual Director Director { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+
+        {
+
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+        }
     }
 }

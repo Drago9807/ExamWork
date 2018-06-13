@@ -9,7 +9,7 @@ namespace ExamWork.DB.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(ExamWork.DB.MovieContext context)
