@@ -11,7 +11,7 @@ namespace ExamWork.DB.Migrations
                 "dbo.Director",
                 c => new
                 {
-                    DirectorID = c.Int(nullable: true, identity: true),
+                    DirectorID = c.Int(nullable: false, identity: true),
                     DirectorName = c.String(nullable: false, maxLength: 50),
                 })
                 .PrimaryKey(t => t.DirectorID);
@@ -20,11 +20,11 @@ namespace ExamWork.DB.Migrations
                 "dbo.Movie",
                 c => new
                 {
-                    MovieID = c.Int(nullable: true, identity: true),
+                    MovieID = c.Int(nullable: false, identity: true),
                     MovieName = c.String(nullable: false, maxLength: 50),
                     MoviePrice = c.Double(nullable: true),
-                    GenreID = c.Int(nullable: true),
-                    DirectorID = c.Int(nullable: true),
+                    GenreID = c.Int(nullable: false),
+                    DirectorID = c.Int(nullable: false),
                 })
                 .PrimaryKey(t => t.MovieID)
                 .ForeignKey("dbo.Director", t => t.DirectorID, cascadeDelete: true)
@@ -36,7 +36,7 @@ namespace ExamWork.DB.Migrations
                 "dbo.Genre",
                 c => new
                 {
-                    GenreID = c.Int(nullable: true, identity: true),
+                    GenreID = c.Int(nullable: false, identity: true),
                     GenreType = c.String(nullable: false),
                 })
                 .PrimaryKey(t => t.GenreID);

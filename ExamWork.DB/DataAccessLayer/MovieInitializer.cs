@@ -22,12 +22,12 @@ namespace ExamWork.DB.DataAccessLayer
         {
             var movies = new List<Movie>
                     {
-                        new Movie{MovieID=1,MovieName="Avengers: Infinity war",MoviePrice=8.99,GenreID=1,DirectorID=1},
-                        new Movie{MovieID=2,MovieName="Black Panther",MoviePrice=7.99,GenreID=1,DirectorID=1},
-                        new Movie{MovieID=3,MovieName="Deadpool 2",MoviePrice=6.99,GenreID=1,DirectorID=2},
-                        new Movie{MovieID=4,MovieName="Solo: A star wars story",MoviePrice=5.99,GenreID=2,DirectorID=3},
-                        new Movie{MovieID=5,MovieName="Jurassic world",MoviePrice=4.99,GenreID=2,DirectorID=4},
-                        new Movie{MovieID=6,MovieName="Night games",MoviePrice=3.99,GenreID=3,DirectorID=5}
+                        new Movie{MovieID=1,MovieName="Avengers: Infinity war",MoviePrice=5.00,GenreID=1,DirectorID=1},
+                        new Movie{MovieID=2,MovieName="Black Panther",MoviePrice=7.00,GenreID=1,DirectorID=1},
+                        new Movie{MovieID=3,MovieName="Deadpool 2",MoviePrice=6.00,GenreID=1,DirectorID=2},
+                        new Movie{MovieID=4,MovieName="Solo: A star wars story",MoviePrice=5.00,GenreID=2,DirectorID=3},
+                        new Movie{MovieID=5,MovieName="Jurassic world",MoviePrice=4.00,GenreID=2,DirectorID=4},
+                        new Movie{MovieID=6,MovieName="Night games",MoviePrice=3.00,GenreID=3,DirectorID=5}
                     };
             //movies.ForEach(s => context.Movies.Add(s));
             //context.SaveChanges();

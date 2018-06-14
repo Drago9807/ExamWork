@@ -14,8 +14,7 @@ using ExamWork.DB.Entities;
 namespace ExamWork.Controllers
 {
     public class MoviesController : Controller
-    {
-        //TUK NE SUM SIGUREN
+    {     
         private IBaseRepository baseRepository;
 
         public MoviesController()
@@ -26,13 +25,15 @@ namespace ExamWork.Controllers
 
 
         // GET: Movies
+        [HttpGet]
         public ActionResult Index()
         {
-            var movies = db.Movies.Include(m => m.Director).Include(m => m.Genre);
+            var movies = db.Movies.Include(c => c.Director).Include(c => c.Genre);
             return View(movies.ToList());
         }
 
         // GET: Movies/Details/5
+        [HttpGet]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -53,6 +54,7 @@ namespace ExamWork.Controllers
         }
 
         // GET: Movies/Create
+        [HttpGet]
         public ActionResult Create()
         {
             ViewBag.DirectorID = new SelectList(db.Directors, "DirectorID", "DirectorName");
@@ -71,8 +73,8 @@ namespace ExamWork.Controllers
             {
                 db.Movies.Add(movie);
                 db.SaveChanges();///////
-                baseRepository.InsertMovie(movie);////////
-                baseRepository.Save();//////////
+                //baseRepository.InsertMovie(movie);////////
+                //baseRepository.Save();//////////
                 return RedirectToAction("Index");
             }
 
@@ -82,6 +84,7 @@ namespace ExamWork.Controllers
         }
 
         // GET: Movies/Edit/5
+        [HttpGet]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -120,6 +123,7 @@ namespace ExamWork.Controllers
         }
 
         // GET: Movies/Delete/5
+        [HttpGet]
         public ActionResult Delete(int? id)
         {
             if (id == null)

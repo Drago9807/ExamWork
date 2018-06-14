@@ -25,7 +25,8 @@ namespace ExamWork.DB.Entities
 
         [Required(ErrorMessage = "Price of the movie is required")]
         [Display(Name = "Movie price")]
-        public double MoviePrice { get; set; }
+        [DisplayFormat(DataFormatString = "{0:C0}")]
+        public double? MoviePrice { get; set; }
 
         [ForeignKey("Genre")]
         [Required]
