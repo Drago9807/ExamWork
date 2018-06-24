@@ -143,6 +143,7 @@ namespace ExamWork.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        //za posle
         //
         // GET: /Account/ExternalLoginFailure
         [AllowAnonymous]
