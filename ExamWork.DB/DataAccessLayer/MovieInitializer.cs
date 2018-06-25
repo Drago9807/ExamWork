@@ -6,7 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ExamWork.DB.DataAccessLayer
-{//prilojenie v application_start
+{
+    //намира приложение в application_start
     public class MovieInitializer : System.Data.Entity.DropCreateDatabaseAlways<MovieContext>
     {
         protected override void Seed(MovieContext context)

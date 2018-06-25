@@ -14,7 +14,7 @@ namespace ExamWork.Models
             return userIdentity;
         }
     }
-    //ApplicationDbContext
+
     public class MovieContext : IdentityDbContext<ApplicationUser>
     {
         public MovieContext() : base("DefaultConnection", throwIfV1Schema: false)

@@ -39,11 +39,8 @@ namespace ExamWork.DB.Entities
         public virtual Director Director { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
-
         {
-
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-
         }
     }
 }

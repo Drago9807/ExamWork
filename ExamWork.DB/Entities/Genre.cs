@@ -24,7 +24,6 @@ namespace ExamWork.DB.Entities
         public virtual ICollection<Movie> Movies { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
-
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
