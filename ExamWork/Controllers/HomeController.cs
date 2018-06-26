@@ -15,7 +15,7 @@ namespace ExamWork.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Application that allows the user to create,change,delete a specific information about a movie.";
+            ViewBag.Message = "Application that allows the user to create, change, delete a specific information about a movie.";
 
             return View();
         }

@@ -19,7 +19,7 @@ namespace ExamWork.Controllers
 
         public MoviesController()
         {
-            this.baseRepository = new BaseRepository(new MovieContext());///////
+            this.baseRepository = new BaseRepository(new MovieContext());
         }
         private MovieContext db = new MovieContext();
 
@@ -49,7 +49,7 @@ namespace ExamWork.Controllers
         }
         public ViewResult Details(int id)
         {
-            Movie movie = baseRepository.GetMovieByID(id); ///////
+            Movie movie = baseRepository.GetMovieByID(id); 
             return View(movie);
         }
 
@@ -63,18 +63,16 @@ namespace ExamWork.Controllers
         }
 
         // POST: Movies/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MovieID,MovieName,MoviePrice,GenreID,DirectorID")] Movie movie)
+        public ActionResult Create([Bind(Include = "MovieID, MovieName, MoviePrice, GenreID, DirectorID")] Movie movie)
         {
             if (ModelState.IsValid)
             {
-                db.Movies.Add(movie);
-                db.SaveChanges();///////
-                //baseRepository.InsertMovie(movie);////////
-                //baseRepository.Save();//////////
+                //db.Movies.Add(movie);
+                //db.SaveChanges();
+                baseRepository.InsertMovie(movie);
+                baseRepository.Save();
                 return RedirectToAction("Index");
             }
 
@@ -98,23 +96,20 @@ namespace ExamWork.Controllers
             }
             ViewBag.DirectorID = new SelectList(db.Directors, "DirectorID", "DirectorName", movie.DirectorID);
             ViewBag.GenreID = new SelectList(db.Genres, "GenreID", "GenreType", movie.GenreID);
-            //Movie movie = baseRepository.GetMovieByID(id);
             return View(movie);
         }
 
         // POST: Movies/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MovieID,MovieName,MoviePrice,GenreID,DirectorID")] Movie movie)
+        public ActionResult Edit([Bind(Include = "MovieID, MovieName, MoviePrice, GenreID, DirectorID")] Movie movie)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(movie).State = EntityState.Modified;
-                db.SaveChanges();
-                baseRepository.UpdateMovie(movie);////////
-                baseRepository.Save();///////
+                //db.Entry(movie).State = EntityState.Modified;
+                //db.SaveChanges();
+                baseRepository.UpdateMovie(movie);
+                baseRepository.Save();
                 return RedirectToAction("Index");
             }
             ViewBag.DirectorID = new SelectList(db.Directors, "DirectorID", "DirectorName", movie.DirectorID);
@@ -135,7 +130,6 @@ namespace ExamWork.Controllers
             {
                 return HttpNotFound();
             }
-            //Movie movie = baseRepository.GetMovieByID(id);//
             return View(movie);
         }
 

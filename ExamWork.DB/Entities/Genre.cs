@@ -21,7 +21,7 @@ namespace ExamWork.DB.Entities
         [Display(Name = "Genre type")]
         public string GenreType { get; set; }
 
-        public virtual ICollection<Movie> Movies { get; set; }
+        //public virtual ICollection<Movie> Movies { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

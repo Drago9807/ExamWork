@@ -12,11 +12,9 @@ namespace ExamWork.DB.DataAccessLayer
     {
         protected override void Seed(MovieContext context)
         {
-
             GetMovies().ForEach(c => context.Movies.Add(c));
             GetGenres().ForEach(c => context.Genres.Add(c));
             GetDirectors().ForEach(c => context.Directors.Add(c));
-
         }
 
         private static List<Movie> GetMovies()
@@ -30,8 +28,6 @@ namespace ExamWork.DB.DataAccessLayer
                         new Movie{MovieID=5,MovieName="Jurassic world",MoviePrice=4.00,GenreID=2,DirectorID=4},
                         new Movie{MovieID=6,MovieName="Night games",MoviePrice=3.00,GenreID=3,DirectorID=5}
                     };
-            //movies.ForEach(s => context.Movies.Add(s));
-            //context.SaveChanges();
             return movies;
         }
 
@@ -43,8 +39,6 @@ namespace ExamWork.DB.DataAccessLayer
                         new Genre{GenreID=2,GenreType="Fantasy"},
                         new Genre{GenreID=3,GenreType="Comedy"}
                     };
-            //genres.ForEach(s => context.Genres.Add(s));
-            //context.SaveChanges();
             return genres;
         }
         private static List<Director> GetDirectors()
@@ -57,8 +51,6 @@ namespace ExamWork.DB.DataAccessLayer
                         new Director{DirectorID=4,DirectorName="Colin Trevorrow"},
                         new Director{DirectorID=5,DirectorName="Jorn Francis Daley"}
                     };
-            //directors.ForEach(s => context.Directors.Add(s));
-            //context.SaveChanges();
             return directors;
         }
 

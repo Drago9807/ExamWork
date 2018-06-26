@@ -21,7 +21,7 @@ namespace ExamWork.DB.Entities
         [Display(Name = "Director name")]
         public string DirectorName { get; set; }
 
-        public virtual ICollection<Movie> Movies { get; set; }
+        //public virtual ICollection<Movie> Movies { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
